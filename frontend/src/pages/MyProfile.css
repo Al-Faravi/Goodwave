@@ -1,0 +1,92 @@
+/* Main container for profile */
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f7f6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Profile Card Style */
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-email {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Section for Skills & Causes */
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skills-list, .causes-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-list li, .causes-list li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Edit Profile Button */
+.edit-profile-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.edit-profile-btn:focus {
+  outline: none;
+}

@@ -1,0 +1,217 @@
+/* Global Styling */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Set consistent background color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .discover-events {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensure the content section takes up available space */
+    background-color: #f9f9f9;
+    padding: 40px 0;
+  }
+  
+  .discover-events h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    padding-top: 2rem;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 22%;
+  }
+  
+  .filters input[type="date"] {
+    width: 20%;
+  }
+  
+  .event-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .event-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .event-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .event-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .event-card button {
+    background-color: #a2783a;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .event-card button:hover {
+    background-color: #8e642b;
+  }
+  
+  /* Navbar Styling */
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2c3e50; /* Matching navbar background color with footer */
+    z-index: 1000;
+    border-bottom: 2px solid #f39c12;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: antiquewhite;
+  }
+  
+  header nav .logo {
+    flex: 1;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 3;
+  }
+  
+  header nav ul li {
+    font-size: 18px;
+    color: #333;
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #dedede;
+  }
+  
+  header nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  header nav .search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  header nav .search-bar input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 200px;
+    outline: none;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #2c3e50; /* Same as navbar for seamless design */
+    padding: 20px 0;
+    text-align: center;
+    
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+  
+  footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin: 0 15px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .filters input,
+    .filters select {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    .event-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .filters input,
+    .filters select {
+      width: 100%;
+    }
+  
+    .event-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    header nav .search-bar input {
+      width: 80%;
+    }
+  }
+  

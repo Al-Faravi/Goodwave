@@ -1,0 +1,150 @@
+/* ==================== Form Page Styling ==================== */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container for Signup & Login Forms */
+.signup-form-container, .login-form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Styling */
+.signup-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Fields */
+.signup-form-field, .login-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form-field label, .login-form-field label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.signup-form-field input, .login-form-field input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form-field input:focus, .login-form-field input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Form Buttons */
+.signup-form-button, .login-form-button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-form-button:hover, .login-form-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.signup-form-button:active, .login-form-button:active {
+  transform: translateY(0);
+}
+
+/* Links */
+.signup-form-link, .login-form-link {
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.signup-form-link a, .login-form-link a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.signup-form-link a:hover, .login-form-link a:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Toastify Overrides */
+.ToastContainer {
+  font-size: 14px;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.Toastify__toast--success {
+  background-color: #4CAF50;
+}
+
+.Toastify__toast--error {
+  background-color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .signup-form-container, .login-form-container {
+    padding: 20px;
+  }
+
+  .signup-form-field input, .login-form-field input {
+    padding: 10px;
+  }
+
+  .signup-form-button, .login-form-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
